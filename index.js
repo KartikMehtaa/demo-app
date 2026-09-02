@@ -22,10 +22,10 @@ import { publicIp, publicIpv4, publicIpv6 } from 'public-ip';
 
 
 // For mongodb
-const  mongoUrl= 'mongodb://3.81.12.106:27017/'// Replace with mongodb server IP
+const  mongoUrl= process.env.MONGO_URL; // Replace with mongodb server IP
 const client = new MongoClient(mongoUrl); 
 
-const db = client.db('mydatabase'); // Name of your database
+const db = client.db(process.env.MONGO_DB || "mydatabase"); // Name of your database
 const collection = db.collection('mycollection'); // Name of your collection
 
 // Database connection function
