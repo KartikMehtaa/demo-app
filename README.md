@@ -621,3 +621,6 @@ Application Deployment
 ```
 
 Nginx can additionally be placed in front of the application as a reverse proxy, allowing users to access the application through a standard HTTP/HTTPS endpoint instead of directly exposing the Node.js port.
+## Final Output
+
+![Final Output](./final-output.png)
